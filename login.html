@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>login</title>
+    <title>register</title>
 </head>
-<body class="bg-sky-500 flex justify-center place-items-center ">
+<body class="bg-sky-500 flex flex-col items-center">
     
-    <div class="bg-slate-50 h-4/5 w-10/12 flex items-center flex-col bg-clip-border">
-        <div class="w-60">
-        <h1 class="m-9  text-5xl font-bold text-center">login</h1>
+    <div class=" h-4/5 w-96 flex items-center flex-col rounded-xl mt-72 drop-shadow-lg bg-white/70">
+        
+        <h1 class="m-9  text-5xl font-bold text-center">REGISTER</h1>
         <form class="flex flex-col ">
-        <input type="text" class=" text-center bg-gray-200 my-2" placeholder="username" required>
-        <input type="number" class="bg-gray-200 text-center">
-        <button class="m-9">login</button>
-
+        <input id="userName" type="text" class="caret-blue-500 w-60 rounded-xl outline-0 text-center bg-white/80 my-2 drop-shadow-md " placeholder="username" required>
+        <input id="numberPhone" type="number" class="caret-blue-500 w-60 rounded-xl outline-0 text-center bg-white/80 my-2 drop-shadow-md ahidden"  placeholder="number phone" required>
+        <button class="cursor-pointer my-5 outline outline-blue-500 rounded-xl w-full hover:drop-shadow-lg active:bg-blue-500">LOG IN</button>
+        <p class=""></p>
+            <script src="register.js"></script>
     </form>
     </div>
-    </div>
+    
     
 </body>
 </html>
