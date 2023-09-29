@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- اضافه کردن تیلویند با cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>register</title>
 </head>
+ <!-- استایل دهی را با تیلویند انجام دادم ک هر کدام در کلاس های تگ های مدنظر انجام شده است -->
 <body class="bg-sky-500 flex flex-col items-center">
     
     <div class=" h-4/5 w-96 flex items-center flex-col rounded-xl mt-72 drop-shadow-lg bg-white/70">
         
         <h1 class="m-9  text-5xl font-bold text-center">REGISTER</h1>
-        <form class="flex flex-col ">
-        <input id="userName" type="text" class="caret-blue-500 w-60 rounded-xl outline-0 text-center bg-white/80 my-2 drop-shadow-md " placeholder="username" required>
-        <input id="numberPhone" type="number" class="caret-blue-500 w-60 rounded-xl outline-0 text-center bg-white/80 my-2 drop-shadow-md ahidden"  placeholder="number phone" required>
-        <button class="cursor-pointer my-5 outline outline-blue-500 rounded-xl w-full hover:drop-shadow-lg active:bg-blue-500">LOG IN</button>
-        <p class=""></p>
-            <script src="register.js"></script>
+
+        <form id="form" class="flex flex-col ">
+
+        <input id="userName" type="text" class="caret-blue-500 w-60 h-9 rounded-xl outline-0 text-center bg-white/80 my-2 drop-shadow-md " placeholder="username" >
+
+        <input id="numberPhone" type="number" class="caret-blue-500 w-60 h-9 rounded-xl outline-0 text-center bg-white/80 my-2 drop-shadow-md ahidden"  placeholder="number phone">
+
+        <button id="button" class="cursor-pointer my-5 outline outline-blue-500 rounded-xl h-9 w-full hover:drop-shadow-lg active:bg-blue-500">LOG IN</button>
+
+        <p class="text-center"></p>
+            
     </form>
     </div>
-    
-    
+    <!-- تگ اسکریپت در اخر تگ بادی اضافه میشود ک سورس فایل جاوااسکریپت را به پروژه ما اضافه میکند -->
+<script src="register.js"></script>
 </body>
 </html>
