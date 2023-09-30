@@ -19,10 +19,7 @@ const oksub = (massage) => {
     let p = document.querySelector('p')
     p.innerText = massage
     p.classList.add('text-green-600')
-  
-
 }
-
 // انجام ولیدیشن با کلبک بر روی دکمه
 button.addEventListener('click', validation)
 
@@ -37,8 +34,8 @@ function validation() {
         contactName.classList.add('border-red-600')
         return false
     }else
-    if(contactNameValue.length < 4) {
-        error(contactName, 'نام کاربری باید بیشتر از 4 حرف باشد')
+    if(contactNameValue.length < 3) {
+        error(contactName, 'نام کاربری باید بیشتر از 3 حرف باشد')
         return false
     }
 
@@ -59,7 +56,28 @@ function validation() {
             return false
         }
         // انجام تابع با موفقیت
-        oksub('اطلاعات با موفقیت ثبت شد')
+        oksub('اطلاعات با موفقیت ثبت شد') 
+        
+        // ارسال نام مخاطب و سماره برای س
+        await (await fetch('https://farawin.iran.liara.run/api/contact', {
+        
+        method:'post',
+       
+        Headers:{
+                    'contact-type':'application/json',
+                },
+
+        body: JSON.stringify({
+            "username": numberPhoneValue,
+            "name": contactNameValue
+        })
+
+       
+    })).json()
         
 
     }
+    
+    // کارنکردن api
+    // اضافه کردن کلاس برای قرمز شدن رنگ اینپوت و سبز شدن
+    // حذف کلید های اینپوت نامبر
